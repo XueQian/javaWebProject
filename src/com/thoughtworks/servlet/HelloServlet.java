@@ -22,7 +22,8 @@ public class HelloServlet extends HttpServlet {
 //        PrintWriter out = response.getWriter();
 //        out.println("<html><body><center>Test<hr/></center></body></html>");
 //        out.close();
-        String str = itemService.getItem();
+        int id = Integer.parseInt(request.getParameter("id"));
+        String str = itemService.getItem(id);
         request.setAttribute("items",str);
         request.getRequestDispatcher("index.jsp").forward(request,response);
     }

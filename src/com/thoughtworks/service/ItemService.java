@@ -8,7 +8,7 @@ import com.thoughtworks.dao.ItemDao;
 public class ItemService {
 
     private ItemDao itemDao = new ItemDao();
-    public String getItem(){
-        return itemDao.getItem();
+    public String getItem(int id){
+        return itemDao.getItem(id);
     }
 }
